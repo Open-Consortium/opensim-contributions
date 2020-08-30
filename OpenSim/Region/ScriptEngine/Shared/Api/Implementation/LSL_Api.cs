@@ -18025,6 +18025,8 @@ namespace OpenSim.Region.ScriptEngine.Shared.Api
                 else
                     str = ((LSL_String)o).m_string;
 
+                if(str == string.Empty)
+                    return "\"\"";
                 if(str == ScriptBaseClass.JSON_TRUE || str == "true")
                     return "true";
                 if(str == ScriptBaseClass.JSON_FALSE ||str == "false")
